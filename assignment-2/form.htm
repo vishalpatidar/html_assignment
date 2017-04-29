@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example of HTML File Select box</title>
+  <style>
+    div.form-section {
+      background-color: #FFFC33;
+    }
+    div.form-fields {
+      background-color: #FEFBC2;
+      padding: 10px;
+    }
+    a.help-tip {
+      content: "\003F";
+      background-color: blue;
+      margin: -4px;
+      padding: 0px 6px 0px 6px;
+    }
+    .low {
+      background-color: red;
+      padding: 10px;
+    }
+    .high {
+      background-color: purple;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="heading-title">
+    <h1>Please Enter Your Details For Registration!</h1>
+  </div>
+  <form>
+    <div class="form-section">
+      <p>Your Face</p>
+      <div class="form-fields">
+        <p>
+          <label for="file-select">Your image:</label>
+          <input type="file" name="upload" id="file-select">
+        </p>
+        <p>Image preview:</p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>Your General Details</p>
+      <div class="form-fields">
+        <p>
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Enter full name" required>
+        </p>
+        <p>
+          <label for="gender">Gender:</label>
+          <input type="radio" name="gender" id="male"> Male
+          <input type="radio" name="gender" id="female"> Female
+        </p>
+        <p>
+          <label for="date">Age:</label>
+          <input type="number" name="date">
+        <p>
+          <label for="date">Date of birth:</label>
+          <input type="date" name="date" placeholder="dd/mm/yyyy">
+        </p>
+        <p>
+          <label for="favcolor">Favourite color:</label>
+          <input type="color" name="favcolor" value="#000000">
+        </p>
+        <p>
+          <label for="country">Which country:</label>
+          <select name="country" id="country">
+            <option value="ind">India</option>
+            <option value="aus">Australia</option>
+            <option value="nz">New Zealand</option>
+            <option value="gm">Germany</option>
+          </select>
+          <a href="#" title="Select a country from which you belong." class="help-tip">&quest;</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>Your Indicators</p>
+      <div class="form-fields">
+        <p>
+          <label for="height">Height:</label>
+          <span class="low">Short</span>
+          <input type="range" name="height">
+          <span class="high">Tall</span>
+        </p>
+        <p>
+          <label for="salary">Salary:</label>
+          <span class="low">Poor</span>
+          <input type="range" name="salary">
+          <span class="high">Rich</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>Your Contact Information</p>
+      <div class="form-fields">
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" name="email" required>
+        </p>
+        <p>
+          <label for="mobile">Mobile:</label>
+          <input type="text" name="mobile">
+        </p>
+        <p>
+          <label for="address">Address:</label>
+          <textarea rows="3" cols="50" name="address"></textarea>
+        </p>
+        <p>
+          <label for="contact">Method to contact you:</label>
+          <input type="checkbox" name="email">
+          <span>Email</span>
+          <input type="checkbox" name="whatsapp">
+          <span>Whatsapp</span>
+          <input type="checkbox" name="sports">
+          <span>In-app chat</span>
+        </p>
+      </div>
+    </div>
+    <input type="submit" name="submit" value="submit">
+  </form>
+</body>
+</html>
