@@ -7,13 +7,19 @@
   <style>
     div.form-section {
       background-color: #FFFC33;
+      height: 80%;
+      width: 100%;
     }
     div.form-fields {
       background-color: #FEFBC2;
-      padding: 10px;
+      height: 72%;
+      margin-bottom: 18px;
+      margin-left: 18px;
+      padding: 1% 0 2% 0;
+      width: 87%;
     }
     a.help-tip {
-      content: "\003F";
+      color: aliceblue;
       background-color: blue;
       margin: -4px;
       padding: 0px 6px 0px 6px;
@@ -25,6 +31,21 @@
     .high {
       background-color: purple;
       padding: 10px;
+    } 
+    p {
+      margin-bottom: 0px;
+      padding-left: 4%;
+    }
+    label {
+      display: inline-block;
+      width: 15%;
+      text-align: right;
+    }
+    input[type="number"] {
+      width: 30px;
+    }
+    label[for="address"] {
+      float: left;
     }
 
   </style>
@@ -41,7 +62,9 @@
           <label for="file-select">Your image:</label>
           <input type="file" name="upload" id="file-select">
         </p>
-        <p>Image preview:</p>
+        <p>
+          <label for="image-preview">Image preview:</label>
+        </p>
       </div>
     </div>
 
@@ -58,8 +81,8 @@
           <input type="radio" name="gender" id="female"> Female
         </p>
         <p>
-          <label for="date">Age:</label>
-          <input type="number" name="date">
+          <label for="age">Age:</label>
+          <input type="number" name="age" min="1">
         <p>
           <label for="date">Date of birth:</label>
           <input type="date" name="date" placeholder="dd/mm/yyyy">
@@ -71,6 +94,7 @@
         <p>
           <label for="country">Which country:</label>
           <select name="country" id="country">
+            <option value="">Select country</option>
             <option value="ind">India</option>
             <option value="aus">Australia</option>
             <option value="nz">New Zealand</option>
