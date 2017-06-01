@@ -8,18 +8,16 @@
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/bootstrap-social.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="container">
 
         <!-- Logo-section -->
         <div class="logo-section">
-            <a class="site-title clearfix" href="#">
+            <span class="site-title clearfix">
                 <img class="img-responsive pull-left" src="assets/images/zozor_logo.png" alt="logo" />
                 <h1>Zoror</h1>
-            </a>
+            </span>
         </div><!-- logo-section -->
 
         <!-- Navbar -->
@@ -171,7 +169,54 @@
                     </div><!-- friends-list -->
                 </div><!-- col-sm-4 -->
             </div><!-- row -->
+            <div class="map" id="map"></div>
+            <div class="error" id="error"></div>
         </footer><!-- footer -->
     </div><!-- container -->
+    <script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVrPhW3Hcj6N3f55WP65M2SbSGXk4L-6U"></script>
+    <script type="text/javascript">
+        var x         = document.getElementById("error");
+        var mapholder = document.getElementById("map");
+
+        $(document).ready( function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        });
+
+        function showPosition(position) {
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            var latlon = new google.maps.LatLng(lat, lon);
+            console.log(latlon);
+            var mapOptions = {
+                center: latlon,
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            }
+            var map = new google.maps.Map(mapholder, mapOptions);
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Location information is unavailable."
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "The request to get user location timed out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occurred."
+                    break;
+            }
+        }
+    </script>
 </body>
 </html>

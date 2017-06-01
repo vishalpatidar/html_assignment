@@ -163,3 +163,8 @@ footer .heading-text {
 .friends-list .fa-arrow-right:before {
     padding-right: 10px;
 }
+
+.map {
+    height: 400px;
+    width: 100%;
+}
