@@ -1,0 +1,173 @@
+@font-face {
+    font-family: "Ballpark";
+    src: url(../fonts/ballpark.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Dayrom";
+    src: url(../fonts/dayrom.ttf) format("truetype");
+}
+
+body {
+    background-image: url('../images/yellow_background.png');
+}
+
+h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.logo-section {
+    padding-top: 1%;
+}
+
+.logo-section h1 {
+    display: inline-block;
+}
+
+.logo-section h3 {
+    padding: 20px;
+}
+
+.navbar {
+   background: transparent;
+   border: none;
+}
+
+.site-title {
+    color: #000;
+    font-family: "Ballpark";
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.main-menu {
+    font-family: "Dayrom";
+    border-bottom: 5px solid transparent;
+    -webkit-border-image: url(../images/line.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(../images/line.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(../images/line.png) 30 round;
+}
+
+.banner img {
+    border-radius: 8px;
+    box-shadow: -1px 2px 8px black;
+    width: 100%;
+}
+
+.banner-wrap {
+    position: relative;
+}
+
+.banner-text {
+    background-color: rgba(0,0,0,0.65);
+    border-radius: 6px;
+    color: #FFF;
+    display: table;
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+}
+
+.text-wrap {
+    display: table-cell;
+    font-size: 18px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.main-section {
+    border-bottom: 5px solid transparent;
+    -webkit-border-image: url(../images/line.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(../images/line.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(../images/line.png) 30 round;
+}
+
+.section-heading {
+    display: table;
+    padding: 5% 0;
+}
+
+.heading-text {
+    color: #777;
+    font-family: "Dayrom";
+    font-size: 24px;
+}
+
+.section-heading .heading-text {
+    display: table-cell;
+    padding-left: 1%;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #706B64;
+    border-radius: 8px;
+    color: #FFF;
+    margin: 13% auto;
+}
+
+.sidebar-wrap {
+    padding: 15% 3%;
+    position: relative;
+}
+
+.tip {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background: transparent;
+    border: 10px solid #706B64;
+}
+
+.tip-left {
+    left: -20px;
+    top: 25%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+
+.tip-top {
+    top: -20px;
+    left: 20%;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+
+.author-image img {
+    margin: 0 auto;
+}
+
+.about-author {
+    margin: 10% auto;
+}
+
+.section-border {
+    margin-top: -3px;
+}
+
+footer .heading-text {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.pictures img {
+    border: 1px solid #000;
+    margin-top: 4px;
+}
+
+.friends-list .fa-arrow-right {
+    color: #994142;
+    display: block;
+    padding-bottom: 5%;
+}
+
+.friends-list .fa-arrow-right:before {
+    padding-right: 10px;
+}
